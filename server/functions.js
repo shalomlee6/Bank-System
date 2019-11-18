@@ -3,7 +3,7 @@ const fs = require("fs");
 const util = require('util');
 const xml2js = require("xml2js");
 const parser = new xml2js.Parser();
-const path = "./server/xml/myfile.xml";
+const path = "./xml/myfile.xml";
 
 
 
@@ -34,7 +34,7 @@ function getXML() {
           if (error === null) {
             console.log(result["BRANCH"]);
 
-            fs.appendFile("./server/xml/myfile.xml", xml, function(err) {
+            fs.appendFile("./xml/myfile.xml", xml, function(err) {
               if (err) {
                 throw err;
               } else {
